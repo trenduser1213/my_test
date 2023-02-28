@@ -27,11 +27,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int _counter = 1;
+  var _text = "ganjil";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      if (_counter > 10) {
+        _counter = 1;
+      }
+      if (_counter % 2 == 0) {
+        _text = "genap";
+      } else {
+        _text = "ganjil";
+      }
     });
   }
 
@@ -52,6 +61,10 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text(
+              _text,
+              style: Theme.of(context).textTheme.headline4,
+            )
           ],
         ),
       ),
