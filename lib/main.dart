@@ -1,215 +1,65 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
-        title: Text("Stack & Align"),
+        title: Text(widget.title),
       ),
-      body: Stack(
-        children: <Widget>[
-          Column(
-            children: <Widget>[
-              Flexible(
-                flex: 1,
-                child: Row(children: <Widget>[
-                  Flexible(
-                      flex: 1,
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        color: Colors.blueAccent,
-                      )),
-                  Flexible(
-                      flex: 1,
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        color: Colors.amberAccent,
-                      ))
-                ]),
-              ),
-              Flexible(
-                flex: 1,
-                child: Row(children: <Widget>[
-                  Flexible(
-                      flex: 1,
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        color: Colors.amberAccent,
-                      )),
-                  Flexible(
-                      flex: 1,
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        color: Colors.blueAccent,
-                      ))
-                ]),
-              )
-            ],
-          ),
-          ListView(
-            children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Ini adalah contoh text stack mencoba dari tutorial youtube.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              )
-            ],
-          ),
-          Align(
-            alignment: Alignment(1, -1),
-            child: ElevatedButton(
-              child: Text("tekan"),
-              onPressed: () {},
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'You have pushed the button this many times:',
             ),
-          ),
-          Container(
-            padding: EdgeInsets.all(30),
-            child: Image(
-              image: NetworkImage(
-                  "https://i.pinimg.com/736x/63/a2/bc/63a2bc8378c8e94a685289c37bfaaa95.jpg"),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
             ),
-          ),
-          Container(
-            padding: EdgeInsets.all(100),
-            child: Image(
-              image: NetworkImage(
-                  "https://i.pinimg.com/736x/63/a2/bc/63a2bc8378c8e94a685289c37bfaaa95.jpg"),
-            ),
-          )
-        ],
+          ],
+        ),
       ),
-    ));
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ),
+    );
   }
 }
