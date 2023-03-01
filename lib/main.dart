@@ -104,45 +104,6 @@ class _MyHomePageState extends State<MyHomePage> {
       }
 
       _prime = i - 1;
-      // _counterPrime++;
-      // if (_counterPrime <= 2) {
-      //   _prime += 'no, ';
-      // }
-      // if (_counterPrime = 2) {
-      //   _prime += '${_counterPrime}, ';
-      // } else {
-      //   for (int i = 2; i <= _counterPrime / 2; i++) {
-      //     if (_counterPrime % i == 0) {
-      //       _prime += 'no, ';
-      //       break;
-      //     } else {
-      //       _prime += '${_counterPrime}, ';
-      //       break;
-      //     }
-      //   }
-      // }
-      // if (_counterPrime >= 2) {
-      //   for (int i = 2; i <= _counterPrime / 2; i++) {
-      //     if (_counterPrime % i != 0) {
-      //       _prime += '${_counterPrime}, ';
-      //     }
-      //   }
-      // }
-
-      // int _counterPrime = 20;
-      // print("Bilangan prima antara 1 dan $_counterPrime adalah:");
-      // for (int i = 2; i <= _counterPrime; i++) {
-      //   bool isPrime = true;
-      //   for (int j = 2; j <= i / 2; j++) {
-      //     if (i % j == 0) {
-      //       isPrime = false;
-      //       break;
-      //     }
-      //   }
-      //   if (isPrime) {
-      //     _prime += '${_counterPrime}, ';
-      //   }
-      // }
     });
   }
 
